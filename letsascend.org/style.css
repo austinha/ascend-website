@@ -42,9 +42,11 @@ body {
 }
 
 img {
-    width: 577px;
+    width: 500px;
     display: block;
     margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
@@ -86,14 +88,15 @@ p {
     margin-bottom: 1em;
 }
 
-button, .button {
+button, #submit-button {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1em;
-    padding: 0.7em;
-    padding-left: 1.2em;
-    padding-right: 1.2em;
+
+    padding: 0.8em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
 
     outline: none;
 
@@ -136,7 +139,7 @@ button, .button {
     text-decoration: none;
 }
 
-.header  .live {
+.header .live {
     /*color: #FFBE1F;*/
     opacity: 0.5;
 }

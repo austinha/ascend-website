@@ -32,7 +32,7 @@
           list, so use it wisely! You may unsubscribe at any time.
         </p>
 
-				<form id="form" method="post" action="http://lists.letsascend.org/subscribe.cgi/ascend-marysville-letsascend.org"> 
+				<form id="form"> 
           <p>Your E-mail address: <input name="email"></p>
           <p>Your Name: <input name="fullname"></p>
         
@@ -54,29 +54,22 @@
           (You may choose NoMail after you join.) <input type="radio" name=
           "digest" value="0" checked> No <input type="radio" name="digest"
           value="1"> Yes</p>-->
-        
-          
           <p>
-              <strong>A NOTE BEFORE YOU SUBMIT:</strong> Make sure you check your email
-              and confirm your subscription after submitting! You may need to check your
-              spam folder, since the service we use is filtered aggressively by Google.
-          </p>
-
-          <p>
-            <input class="button" type="submit" name="email-button" value="Subscribe">
+            <input class="shadow" id="submit-button" type="submit" name="email-button" value="Subscribe">
           </p>
           </form>
           <script>
-              let form=document.getElementById('form');
-              form.onsubmit=function(e){
-                e.preventDefault();
+              let formElement = document.getElementById('form');
+              formElement.onsubmit = function(event) {
+                event.preventDefault();
 
-                form.submit();
+                let request = new XMLHttpRequest();
+                request.open("POST", "http://lists.letsascend.org/subscribe.cgi/ascend-marysville-letsascend.org");
+                request.send(new FormData(formElement));
 
-                alert("Thank you! Now, check your email and confirm your subscription. You may need to check your spam.");
-
-                //window.location = "thanks.html";
-              }
+                //alert("Thank you! Now, check your email and confirm your subscription. You may need to check your spam.");
+                window.location = "thanks.html";
+              };
           </script>
 			</div>
 	  </div>
