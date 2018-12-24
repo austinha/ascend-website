@@ -29,6 +29,18 @@ body {
     margin-right: auto;
 }
 
+#form-content {
+    position: relative;
+}
+
+#mail-list-form {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
 img {
     width: 577px;
     display: block;
@@ -74,7 +86,7 @@ p {
     margin-bottom: 1em;
 }
 
-button {
+button, .button {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -122,4 +134,9 @@ button {
     color: white;
     display: block;
     text-decoration: none;
+}
+
+.header  .live {
+    /*color: #FFBE1F;*/
+    opacity: 0.5;
 }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900" rel="stylesheet">
+		<title>ASCEND</title>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119252676-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-119252676-1');
+		</script>
+	</head>
+	<body>
+	  <div class="header">
+	    <ul>
+        <li><a class="live" href="subscribe.html">Subscribe</a></li>
+        <li><a href="http://letsascend.org/blog">Blog</a></li>
+        <li><a href="index.html">Home</a></li>
+	    </ul>
+	  </div>
+	  <div id="form-content">
+			<div class="card card-4" id="mail-list-form">
+        <h1>Join the discussion below!</h1>
+        <p>
+          This is a <strong>public</strong> mailing list for all of ASCEND 
+          Marysville. Sending an email to this list emails everyone on the
+          list, so use it wisely! You may unsubscribe at any time.
+        </p>
+
+				<form id="form" method="post" action="http://lists.letsascend.org/subscribe.cgi/ascend-marysville-letsascend.org"> 
+          <p>Your E-mail address: <input name="email"></p>
+          <p>Your Name: <input name="fullname"></p>
+        
+          <!-- DISABLE PASSWORDS ON MAILMAN: https://gist.github.com/dchest/5175956 -->
+
+         <!-- <p>You may enter a privacy password below. This provides only
+          mild security, but should prevent others from messing with your
+          subscription. <strong>Do not use a valuable password</strong> as
+          it will occasionally be emailed back to you in cleartext. If you
+          choose not to enter a password, one will be automatically
+          generated for you, and it will be sent to you once you've
+          confirmed your subscription. You can always request a mail-back
+          of your password when you edit your personal options.</p>
+        
+          <p>Password choice: <input type="password" name="pw"> Confirm
+          Password: <input type="password" name="pw-conf"></p>-->
+        
+          <!--<p>Would you like to receive list mail batched in a daily digest?
+          (You may choose NoMail after you join.) <input type="radio" name=
+          "digest" value="0" checked> No <input type="radio" name="digest"
+          value="1"> Yes</p>-->
+        
+          
+          <p>
+              <strong>A NOTE BEFORE YOU SUBMIT:</strong> Make sure you check your email
+              and confirm your subscription after submitting! You may need to check your
+              spam folder, since the service we use is filtered aggressively by Google.
+          </p>
+
+          <p>
+            <input class="button" type="submit" name="email-button" value="Subscribe">
+          </p>
+          </form>
+          <script>
+              let form=document.getElementById('form');
+              form.onsubmit=function(e){
+                e.preventDefault();
+
+                form.submit();
+
+                alert("Thank you! Now, check your email and confirm your subscription. You may need to check your spam.");
+
+                //window.location = "thanks.html";
+              }
+          </script>
+			</div>
+	  </div>
+	</body>
+</html>
